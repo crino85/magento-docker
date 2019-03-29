@@ -27,4 +27,4 @@
 	- `bin/magento setup:upgrade`
 	
 6. You may now access your site!
-	- `http://magento2.test`
+	- `https://magento2.test`
