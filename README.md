@@ -1,4 +1,4 @@
-# Magento 2.3.0 + Docker + MOM Connector
+# Magento 2.3.0 + Docker + MCOM Connector
 
 ## Prerequisites
 1. Magento Enterprise credentials.
@@ -28,3 +28,22 @@
 	
 6. You may now access your site!
 	- `https://magento2.test`
+
+## Configure MCOM connector
+
+1. Add the MCOM connector repository to the composer.json file:
+	- `vim src/composer.json`
+	- `{
+     "repositories": [
+         {
+             "type": "composer",
+             "url": "https://mcom-connector.bcn.magento.com"
+         }
+     ]
+ }`
+ 
+2. Require mcom-connector:
+ 	- `bin/composer require magento/mcom-connector`
+
+3. Magento upgrade:
+	- `bin/magento setup:upgrade`
